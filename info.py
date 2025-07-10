@@ -84,14 +84,14 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/HA_Bots_Support')
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/HA_Bots')
-FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/HA_Films_World')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/HA_Bots")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/HA_Bots")
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/NandhaSupport')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/NandhaBots')
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/A2k_Movies')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/NandhaBots")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/NandhaBots")
 
 # Bot settings
-TIME_ZONE = environ.get('TIME_ZONE', 'Asia/Colombo') # Replace your time zone
+TIME_ZONE = environ.get('TIME_ZONE', 'Asia/Kolkata') # Replace your time zone
 DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 MAX_BTN = int(environ.get('MAX_BTN', 8))
@@ -100,7 +100,7 @@ QUALITY = [quality.lower() for quality in environ.get('QUALITY', '360p 480p 720p
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
 SHORTLINK_URL = environ.get("SHORTLINK_URL", "mdiskshortner.link")
-SHORTLINK_API = environ.get("SHORTLINK_API", "36f1ae74ba1aa01e5bd73bdd0bc22aa915443501")
+SHORTLINK_API = environ.get("SHORTLINK_API", "no")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
@@ -154,7 +154,7 @@ if len(UPI_ID) == 0:
 UPI_NAME = environ.get("UPI_NAME", "") # add your UPI account name
 if len(UPI_NAME) == 0:
     logger.info('UPI_NAME is empty')
-RECEIPT_SEND_USERNAME = environ.get("RECEIPT_SEND_USERNAME", "@Hansaka_Anuhas")
+RECEIPT_SEND_USERNAME = environ.get("RECEIPT_SEND_USERNAME", "@BalaSigma")
 if len(UPI_ID) == 0 or len(UPI_NAME) == 0:
     logger.info('IS_PREMIUM disabled due to empty UPI_ID or UPI_NAME')
     IS_PREMIUM = False
