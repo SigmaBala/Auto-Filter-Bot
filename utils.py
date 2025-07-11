@@ -292,7 +292,7 @@ def get_wish():
     elif now < "18":
         status = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗"
     else:
-        status = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
+        status = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌘"
     return status
     
 async def get_seconds(time_string):
