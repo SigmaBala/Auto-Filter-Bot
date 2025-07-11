@@ -6,7 +6,7 @@ import traceback
 from io import StringIO
 from info import ADMINS
 
-@Client.on_message(filters.command("eval") & filters.user(ADMINS))
+@Client.on_message(filters.command("eval", "e") & filters.user(ADMINS))
 async def executor(client, message):
     try:
         code = message.text.split(" ", 1)[1]
