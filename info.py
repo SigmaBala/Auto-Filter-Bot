@@ -36,7 +36,7 @@ if len(BOT_TOKEN) == 0:
     logger.error('BOT_TOKEN is missing, exiting now')
     exit()
 BOT_ID = BOT_TOKEN.split(":")[0]
-PORT = int(environ.get('PORT', '80'))
+PORT = int(environ.get('PORT', '8080'))
 
 # Upload your images to "postimages.org" and get direct link
 PICS = (environ.get('PICS', 'https://i.postimg.cc/8C15CQ5y/1.png https://i.postimg.cc/gcNtrv0m/2.png https://i.postimg.cc/cHD71BBz/3.png https://i.postimg.cc/F1XYhY8q/4.png https://i.postimg.cc/1tNwGVxC/5.png https://i.postimg.cc/dtW30QpL/6.png https://i.postimg.cc/139dvs3c/7.png https://i.postimg.cc/QtXVtB8K/8.png https://i.postimg.cc/y8j8G1XV/9.png https://i.postimg.cc/zDF6KyJX/10.png https://i.postimg.cc/fyycVqzd/11.png https://i.postimg.cc/26ZBtBZr/13.png https://i.postimg.cc/PJn8nrWZ/14.png https://i.postimg.cc/cC7txyhz/15.png https://i.postimg.cc/kX9tjGXP/16.png https://i.postimg.cc/zXjH4NVb/17.png https://i.postimg.cc/sggGrLhn/18.png https://i.postimg.cc/y8pgYTh7/19.png')).split()
@@ -47,7 +47,7 @@ if len(ADMINS) == 0:
     logger.error('ADMINS is missing, exiting now')
     exit()
 else:
-    ADMINS = int(ADMINS)
+    ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
 INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
@@ -92,7 +92,7 @@ VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/NandhaBots")
 
 # Bot settings
 TIME_ZONE = environ.get('TIME_ZONE', 'Asia/Kolkata') # Replace your time zone
-DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds
+DELETE_TIME = int(environ.get('DELETE_TIME', 600)) # Add time in seconds
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 MAX_BTN = int(environ.get('MAX_BTN', 8))
 LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'hindi english telugu tamil kannada malayalam marathi punjabi').split()]
@@ -104,7 +104,7 @@ SHORTLINK_API = environ.get("SHORTLINK_API", "no")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
-PM_FILE_DELETE_TIME = int(environ.get('PM_FILE_DELETE_TIME', '3600'))
+PM_FILE_DELETE_TIME = int(environ.get('PM_FILE_DELETE_TIME', '600'))
 
 # boolean settings
 USE_CAPTION_FILTER = is_enabled('USE_CAPTION_FILTER', False)
